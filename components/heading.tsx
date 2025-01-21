@@ -33,13 +33,13 @@ export const Heading = () => {
 
             {/* Titles Container */}
             <div className="text-center sm:text-left">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-gray-800 dark:text-gray-100">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-800 dark:text-gray-100">
                     أسماء الله الحسنى
                 </h2>
-                <h2 className="text-xl tracking-tighter sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold text-gray-700 dark:text-gray-200 mt-2">
+                <h2 className="tracking-tighter text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-gray-700 dark:text-gray-200 mt-1">
                     Divine Names of Allah
                 </h2>
-                <h2 className="text-lg text-bn-anek font-black sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-gray-600 dark:text-gray-300 mt-2">
+                <h2 className="text-bn-anek font-black text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-600 dark:text-gray-300 mt-1">
                     আল্লাহর পবিত্র নামসমূহ
                 </h2>
             </div>
