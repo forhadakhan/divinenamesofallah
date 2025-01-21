@@ -1,0 +1,159 @@
+:root {
+	--font-sans: "Inter", sans-serif;
+	--font-serif: "Noto Serif", serif;
+	--font-sans-bengali: "Noto Sans Bengali", sans-serif;
+	--font-serif-bengali: "Noto Serif Bengali", serif;
+	--font-anek-bangla: "Anek Bangla", sans-serif;
+	--font-geist-mono: "Geist Mono", monospace;
+	--font-geist-sans: "Geist Sans", sans-serif;
+
+	--color-light-gray: #dcdcdc; /* gainsboro */
+	--color-gray: #5c5c5c;
+	--color-dark-gray: #2b2b2b;
+	--color-shizog-blue: #3b82f6;
+}
+
+html {
+	margin: 0;
+	background-color: var(--color-light-gray);
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden; /* Hide horizontal scrollbar */
+	overflow-y: scroll; /* Enable vertical scrolling */
+	font-family: var(--font-sans);
+}
+
+/* Prevent image selection and disable right-click context menu for image */
+.nopeselect {
+	pointer-events: none;
+	user-select: none;
+}
+
+/* ************************************* */
+/* Scrollbar */
+
+/* Modify Scrollbar: Hide the default scrollbar */
+body::-webkit-scrollbar {
+	width: 0.35em;
+	background-color: var(--color-dark-gray);
+}
+
+/* Scrollbar: Track */
+body::-webkit-scrollbar-track {
+	background-color: var(--color-dark-gray);
+}
+
+/* Scrollbar: Handle */
+body::-webkit-scrollbar-thumb {
+	background-color: var(--color-gray);
+	border-radius: 1em;
+}
+
+/* Scrollbar: Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-light-gray);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+	display: none; /* Hides the scrollbar in WebKit browsers (Chrome, Safari) */
+	width: 0; /* Sets width to 0 */
+	height: 0; /* Sets height to 0 */
+}
+.hide-scrollbar {
+	-ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+	scrollbar-width: none; /* Hides scrollbar in Firefox */
+	-webkit-overflow-scrolling: touch; /* Enables momentum scrolling on touch devices */
+}
+
+/* ************************************* */
+/* Fonts */
+
+.sblue .text-sblue {
+	color: var(--color-shizog-blue);
+}
+.bg-sblue {
+	background-color: var(--color-shizog-blue);
+}
+
+/* ************************************* */
+
+/* ************************************* */
+/* Fonts */
+
+.text-sans {
+	font-family: var(--font-sans);
+}
+
+.text-serif {
+	font-family: var(--font-serif);
+}
+
+.text-bn-sans {
+	font-family: var(--font-sans-bengali);
+}
+
+.text-bn-serif {
+	font-family: var(--font-serif-bengali);
+}
+
+.text-bn-anek {
+	font-family: var(--font-anek-bangla);
+	word-spacing: 0.5rem;
+}
+
+.text-geist-mono {
+	font-family: var(--font-geist-mono);
+}
+
+.text-geist-sans {
+	font-family: var(--font-geist-sans);
+}
+
+/* ************************************* */
+/*              Loader                   */
+/* ************************************* */
+
+.elastic3loader {
+	width: 0.5rem;
+	height: 2rem;
+	border-radius: 0.3rem;
+	display: block;
+	background-color: currentColor;
+	margin: 1.3rem auto;
+	position: relative;
+	color: #ccddee;
+	animation: elastic3LoaderAnimation 0.3s 0.3s linear infinite alternate;
+}
+
+.elastic3loader::after,
+.elastic3loader::before {
+	content: "";
+	width: 0.5rem;
+	height: 0.8rem;
+	border-radius: 0.3rem;
+	background: currentColor;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 1.3rem;
+	animation: elastic3LoaderAnimation 0.3s 0.45s linear infinite alternate;
+}
+
+.elastic3loader::before {
+	left: -1.3rem;
+	animation-delay: 0s;
+}
+
+@keyframes elastic3LoaderAnimation {
+	0% {
+		height: 2.6rem;
+	}
+
+	100% {
+		height: 0.3rem;
+	}
+}
+
+/* ************************************* */
