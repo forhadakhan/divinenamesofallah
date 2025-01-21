@@ -11,10 +11,11 @@ import type { Metadata } from "next";
 import { MetaInfo } from "@/metadata/info";
 import { Footer } from "@/components/footer";
 import { Heading } from "@/components/heading";
-import { MenuBar } from "@/components/menu-bar";
+import { namesOfAllah } from "@/lib/data/names";
 import { fontVariables } from "@/lib/fonts/config";
 import { ViewProvider } from "@/context/ViewContext";
 import { WebSiteSchemaMarkup } from "@/metadata/schema";
+import { RawTable } from "@/components/design/ListView";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TAGLINE, TAGLINE_BN, DESCRIPTION, DESCRIPTION_BN } from "@/metadata/data";
 
@@ -55,13 +56,16 @@ export default function RootLayout({
 
             <Heading />
 
-            <ViewProvider>
-              <MenuBar /> {/* Client component (as wrapped in ViewProvider) */}
-            </ViewProvider>
 
           </header>
 
-          {children}
+          <main className="w-full">
+            <RawTable names={namesOfAllah} className="sr-only" /> {/* This is for screen readers */}
+
+            <ViewProvider>
+              {children}
+            </ViewProvider>
+          </main>
 
           <Footer />
         </ThemeProvider>

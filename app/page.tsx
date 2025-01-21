@@ -2,22 +2,35 @@
  * FILE: app/page.tsx
  * DESC: This file exports the main page component that displays the names of Allah based on the view type.
  */
+"use client";
 
-import { namesOfAllah } from "@/lib/data/names";
-import Manager from "@/components/design/Manager";
-import { ViewProvider } from "@/context/ViewContext";
-import { RawTable } from "@/components/design/ListView";
+import { MenuBar } from "@/components/menu-bar";
+import { useView } from "@/context/ViewContext";
+import GridView from "@/components/design/GridView";
+import ListView from "@/components/design/ListView";
+import SingleView from "@/components/design/SingleView";
 
 
-export default function Home() {
+export default function HomePage() {
+  const { viewType, currentIndex, filteredNames } = useView();
 
   return (
-    <main className="min-h-screen w-full md:p-8">
-      <RawTable names={namesOfAllah} className="sr-only" /> {/* This is for screen readers */}
-
-      <ViewProvider>
-        <Manager /> {/* Client component (as wrapped in ViewProvider) */}
-      </ViewProvider>
-    </main>
+    <>
+      <MenuBar /> {/* Client component (as wrapped in ViewProvider) */}
+      <div className="min-h-screen w-full md:p-8">
+        {/* View */}
+        {filteredNames.length === 0 ? (
+          <div className="text-center text-gray-600">No results found.</div>
+        ) : (
+          <>
+            {viewType === "single" && (
+              <SingleView name={filteredNames[currentIndex]} />
+            )}
+            {viewType === "grid" && <GridView names={filteredNames} />}
+            {viewType === "list" && <ListView names={filteredNames} />}
+          </>
+        )}
+      </div>
+    </>
   );
 }
