@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <>
       <MenuBar /> {/* Client component (as wrapped in ViewProvider) */}
-      <div className="min-h-screen w-full md:p-8">
+      <div className="min-h-screen w-full max-w-full md:p-8">
         {/* View */}
         {filteredNames.length === 0 ? (
           <div className="text-center text-gray-600">No results found.</div>

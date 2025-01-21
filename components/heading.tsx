@@ -32,7 +32,7 @@ export const Heading = () => {
             </div>
 
             {/* Titles Container */}
-            <div className="text-center sm:text-left">
+            <div className="text-left">
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-800 dark:text-gray-100">
                     أسماء الله الحسنى
                 </h2>

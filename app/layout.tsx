@@ -38,7 +38,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "flex flex-col items-center justify-between",
+          "flex flex-col items-center justify-between max-w-full",
           "min-h-screen bg-gray-100 dark:bg-gray-950 antialiased",
           ...Object.values(fontVariables) // Spread the values of fontVariables
         )}

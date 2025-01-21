@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Divine Names of Allah | আল্লাহর পবিত্র নামসমূহ
+
+This is a Next.js project that provides a comprehensive list of the **99 Divine Names of Allah (Asma Ul Husna)**. Users can explore the names in **English**, **Arabic**, and **Bangla**, along with their meanings. The project supports **dark and light themes**, **search functionality**, and multiple **view types** (single name, grid, and list).
+
+## Features
+
+1. **99 Names of Allah**:
+
+    - View the 99 Divine Names of Allah in **Arabic**, **English**, and **Bangla**.
+    - Each name includes its **meaning** in both English and Bangla.
+
+2. **Multiple View Types**:
+
+    - **Single Name View**: Focus on one name at a time.
+    - **Grid View**: Display names in a grid layout for quick browsing.
+    - **List View**: Display names in a detailed list format.
+
+3. **Dark and Light Themes**:
+
+    - Switch between **dark** and **light** themes for a personalized experience.
+
+4. **Search Functionality**:
+
+    - Search for specific names by typing in the search bar.
+    - Results are displayed instantly as you type.
+
+5. **Responsive Design**:
+
+    - The app is fully responsive and works seamlessly on **desktop**, **tablet**, and **mobile** devices.
+
+6. **SEO Optimized**:
+    - The app is optimized for search engines with proper metadata, schema markup, and keywords.
+
+---
+
+## Technologies Used
+
+-   **Next.js**: A React framework for server-rendered applications.
+-   **Tailwind CSS**: A utility-first CSS framework for styling.
+-   **TypeScript**: For type-safe development.
+-   **React Context API**: For managing theme and view state.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **Node.js**: Make sure you have Node.js installed on your machine.
+-   **npm** or **yarn**: For installing dependencies.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    git clone https://github.com/forhadakhan/divinenamesofallah.git
+    ```
 
-## Learn More
+2. Navigate to the project directory:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    cd divinenamesofallah
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+4. Set up environment variables:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    - Create a `.env.local` file in the root directory.
+    - Add the following environment variable:
+        ```env
+        NEXT_PUBLIC_BASE_URL=http://localhost:3000
+        ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+6. Open your browser and visit:
+    ```
+    http://localhost:3000
+    ```
+
+---
+
+## Usage
+
+### View Types
+
+-   **Single Name View**: Click on a name to view it in detail.
+-   **Grid View**: Browse names in a grid layout.
+-   **List View**: View names in a detailed list format.
+
+### Theme Toggle
+
+-   Click the **theme toggle button** (🌙/☀️) in the navigation bar to switch between dark and light themes.
+
+### Search Functionality
+
+-   Use the **search bar** to find specific names by typing in English, Arabic, or Bangla.
+
+---
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+    ```bash
+    git checkout -b feature/your-feature-name
+    ```
+3. Commit your changes:
+    ```bash
+    git commit -m "feat: add your message here"
+    ```
+4. Push to the branch:
+    ```bash
+    git push origin feature/your-feature-name
+    ```
+5. Open a pull request.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+-   The 99 Names of Allah are sourced from the **Quran** and **Hadith**.
+-   Special thanks to the **Next.js** and **Tailwind CSS** communities for their amazing tools and resources.
+
+---
+
+Enjoy exploring the **99 Divine Names of Allah**! 🌟
+
+---

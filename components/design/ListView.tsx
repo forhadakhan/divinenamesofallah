@@ -18,7 +18,7 @@ export default function ListView({ names, className }: ListViewProps) {
         {names.map((name) => (
           <tr key={name.id} className="border-y">
             {/* ID Column */}
-            <td className="p-4">
+            <td className="p-4 hidden md:table-cell">
               <h3 className="font-bold text-serif text-muted-foreground text-xs sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-6xl">
                 {name.id}
               </h3>
