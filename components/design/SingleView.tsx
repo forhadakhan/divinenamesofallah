@@ -10,12 +10,11 @@ import NameCard from "@/components/design/NameCard";
 import type { NameOfAllah } from "@/lib/data/names";
 import { Button } from "@/components/ui/shadcn/button";
 import { ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
-
+import { useEffect } from "react"; // Import useEffect
 
 interface SingleViewProps {
   name: NameOfAllah;
 }
-
 
 export default function SingleView({ name }: SingleViewProps) {
   const { handleNext, handlePrev } = useView();
@@ -28,6 +27,25 @@ export default function SingleView({ name }: SingleViewProps) {
     onSwipedDown: () => handlePrev(), // Swipe down to go to the previous name
     trackMouse: true, // Enable mouse swipe support (optional)
   });
+
+  // Keyboard event handler
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowLeft") {
+        handlePrev();
+      } else if (event.key === "ArrowRight") {
+        handleNext();
+      }
+    };
+
+    // Add event listener for keydown events
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handlePrev, handleNext]); // Dependencies to ensure the latest functions are used
 
   return (
     <section {...swipeHandlers} className="touch-none">
