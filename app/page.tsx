@@ -5,6 +5,7 @@
 
 import { namesOfAllah } from "@/lib/data/names";
 import Manager from "@/components/design/Manager";
+import { ViewProvider } from "@/context/ViewContext";
 import { RawTable } from "@/components/design/ListView";
 
 
@@ -13,7 +14,10 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full md:p-8">
       <RawTable names={namesOfAllah} className="sr-only" /> {/* This is for screen readers */}
-      <Manager />
+
+      <ViewProvider>
+        <Manager /> {/* Client component (as wrapped in ViewProvider) */}
+      </ViewProvider>
     </main>
   );
 }

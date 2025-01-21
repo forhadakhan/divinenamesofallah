@@ -13,6 +13,7 @@ import { Footer } from "@/components/footer";
 import { Heading } from "@/components/heading";
 import { MenuBar } from "@/components/menu-bar";
 import { fontVariables } from "@/lib/fonts/config";
+import { ViewProvider } from "@/context/ViewContext";
 import { WebSiteSchemaMarkup } from "@/metadata/schema";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TAGLINE, TAGLINE_BN, DESCRIPTION, DESCRIPTION_BN } from "@/metadata/data";
@@ -53,7 +54,11 @@ export default function RootLayout({
             <p className="sr-only">{DESCRIPTION_BN}</p>
 
             <Heading />
-            <MenuBar />
+
+            <ViewProvider>
+              <MenuBar /> {/* Client component (as wrapped in ViewProvider) */}
+            </ViewProvider>
+
           </header>
 
           {children}
