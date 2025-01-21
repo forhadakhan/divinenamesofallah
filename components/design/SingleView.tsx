@@ -32,7 +32,6 @@ export default function SingleView({ name }: SingleViewProps) {
   return (
     <section {...swipeHandlers} className="touch-none">
       <NameCard
-        id={name.id}
         name={name}
         large
         className="flex flex-col items-center justify-center"

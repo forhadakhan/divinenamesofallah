@@ -14,7 +14,7 @@ export default function GridView({ names }: GridViewProps) {
   return (
     <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
       {names.map((name) => (
-        <NameCard key={name.id} id={name.id} name={name} />
+        <NameCard key={name.id} name={name} />
       ))}
     </section>
   )

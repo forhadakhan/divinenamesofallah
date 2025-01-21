@@ -6,14 +6,13 @@ import { cn } from "@/lib/utils";
 import type { NameOfAllah } from "@/lib/data/names";
 
 interface NameCardProps {
-    id?: number
     name: NameOfAllah
     large?: boolean
     className?: string
 }
 
 
-export default function NameCard({ id, name, large = false, className }: NameCardProps) {
+export default function NameCard({ name, large = false, className }: NameCardProps) {
 
     const cardClass = large
         ? "w-full p-8 max-w-full mx-auto"
@@ -24,7 +23,7 @@ export default function NameCard({ id, name, large = false, className }: NameCar
             <div className={`text-center`}>
                 <h2 className={cn("font-arabi my-2", large ? "text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl" : "text-5xl")}>{name.arabic}</h2>
             </div>
-            <p className="my-4 text-muted-foreground text-center">{id}</p>
+            <p className="my-4 text-muted-foreground text-center">{name.id}</p>
             <div className="flex flex-col items-center justify-center space-y-6">
                 <div>
                     <h3 className={`text-center font-bold text-serif ${large ? "text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl" : "text-3xl"} mb-1`}>{name.englishName}</h3>
