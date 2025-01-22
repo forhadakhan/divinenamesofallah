@@ -1,5 +1,7 @@
 # Divine Names of Allah | আল্লাহর পবিত্র নামসমূহ
 
+[🌐 View Live](https://divinenamesofallah.web.app/)
+
 This is a Next.js project that provides a comprehensive list of the **99 Divine Names of Allah (Asma Ul Husna)**. Users can explore the names in **English**, **Arabic**, and **Bangla**, along with their meanings. The project supports **dark and light themes**, **search functionality**, and multiple **view types** (single name, grid, and list).
 
 ## Features
