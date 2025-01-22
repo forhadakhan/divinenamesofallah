@@ -5,6 +5,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { BASE_URL } from '@/metadata/data';
 
 export const Heading = () => {
     return (
@@ -12,7 +13,7 @@ export const Heading = () => {
             {/* Logo Container */}
             <div className="flex-shrink-0 mr-4 sm:mr-6 md:mr-8 lg:mr-10 xl:mr-12 2xl:mr-14">
                 <Image
-                    src="/icons/android-chrome-512x512.png"
+                    src={`${BASE_URL}/icons/android-chrome-512x512.png`}
                     alt="Asma Ul Husna Logo"
                     width={150}
                     height={150}
