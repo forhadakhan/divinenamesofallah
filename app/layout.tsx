@@ -30,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+		<meta name="google-site-verification" content="FCU67WkDWljq9J2tPWKCJTP42GSdk16QevopZmrieK0" />
         {/* Add JSON-LD schema markup */}
         <script
           type="application/ld+json"
